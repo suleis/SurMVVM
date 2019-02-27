@@ -19,6 +19,7 @@ class ArticleFragment : AbsLifecycleFragment<ArticlesViewModel>() {
         super.initView()
         tvName.setOnClickListener {
             getRemoteData()
+            mViewModel!!.mRepository!!.upload()
         }
     }
 
